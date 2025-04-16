@@ -143,7 +143,7 @@ export default function Home() {
                             {
                                 title: '11th April 2025 - 14th April 2025',
                                 desc: 'Participation in the National Meeting of Computer Engineering Students',
-                                loc: 'Higher Institute of Engineering of Porto & Faculty of Engineering of the University of Porto',
+                                loc: 'Instituto Superior de Engenharia do Porto & Faculdade de Engenharia da Universidade do Porto',
                                 cert: true,
                                 image: 'enei_logo.jpeg',
                             },
