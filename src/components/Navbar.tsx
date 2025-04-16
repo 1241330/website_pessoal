@@ -1,15 +1,34 @@
-// @ts-ignore
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const menuRef = useRef<HTMLDivElement>(null);
 
     const toggleMenu = () => setIsOpen(!isOpen);
     const closeMenu = () => setIsOpen(false);
 
+    // Fecha o menu se clicar fora dele
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        } else {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isOpen]);
+
     return (
-        <nav className="p-4 fixed w-full top-0 z-60 border font-mono bg-black">
+        <nav className="p-8 fixed w-full top-0 z-50 border font-mono bg-black">
             <div className="relative max-w-7xl mx-auto flex items-center justify-between">
                 {/* Botão hambúrguer para mobile */}
                 <button className="md:hidden text-white z-50" onClick={toggleMenu}>
@@ -29,17 +48,9 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Overlay para fechar o menu ao clicar fora */}
-            {isOpen && (
-                <div
-                    className="fixed inset-0 bg-black bg-opacity-50 z-40"
-                    onClick={closeMenu}
-                />
-            )}
-
             {/* Menu mobile */}
-            <div className={`md:hidden fixed top-16 left-0 right-0 z-50 ${isOpen ? 'block' : 'hidden'}`}>
-                <div className="flex flex-col space-y-4 bg-black text-white p-6">
+            {isOpen && (
+                <div ref={menuRef} className="md:hidden fixed top-16 left-0 right-0 z-40 bg-black p-6 flex flex-col space-y-4 text-white">
                     <Link to="inicio" smooth={true} className="hover:text-gray-200 cursor-pointer" onClick={closeMenu}>Início</Link>
                     <Link to="sobre" smooth={true} className="hover:text-gray-200 cursor-pointer" onClick={closeMenu}>Sobre Mim</Link>
                     <Link to="hard-skills" smooth={true} className="hover:text-gray-200 cursor-pointer" onClick={closeMenu}>Hard Skills</Link>
@@ -47,7 +58,7 @@ const Navbar = () => {
                     <Link to="timeline" smooth={true} className="hover:text-gray-200 cursor-pointer" onClick={closeMenu}>Timeline</Link>
                     <Link to="projetos" smooth={true} className="hover:text-gray-200 cursor-pointer" onClick={closeMenu}>Projetos</Link>
                 </div>
-            </div>
+            )}
         </nav>
     );
 };
