@@ -1,5 +1,5 @@
-const { Link } = require('react-scroll');
-
+// @ts-ignore
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
     return (
