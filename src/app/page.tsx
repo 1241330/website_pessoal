@@ -93,6 +93,7 @@ export default function Home() {
                         {[
                             'HTML',
                             'CSS',
+                            'TypeScript',
                             'React',
                             'Next.js',
                             'Tailwind CSS',
