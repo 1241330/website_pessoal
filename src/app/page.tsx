@@ -98,9 +98,16 @@ export default function Home() {
                             'Tailwind CSS',
                             'Python',
                             'Java',
+                            'UML',
                             'GitHub',
                             'Scrum',
                             'Wordpress',
+                            'Latex',
+                            'Microsoft Word',
+                            'Mircrosoft Exel',
+                            'Microsoft Powerpoint',
+                            'macOS',
+                            'Windows',
                         ].map((skill, i) => (
                             <li key={i} className="bg-gray-200 text-black rounded-xl p-4 shadow-md">
                                 {skill}
@@ -205,7 +212,7 @@ export default function Home() {
                             period="abr de 2024 - presente"
                             open={descriptionOpen1}
                             setOpen={setDescriptionOpen1}
-                            description="O website da clínica Patrícia Bacelar Psicologia Clínica foi desenvolvido com o objetivo de oferecer uma experiência de navegação clara, intuitiva e humanizada, alinhada à identidade visual da clínica. Nele, os utilizadores encontram informações detalhadas sobre os serviços de psicologia clínica oferecidos, apresentação da Doutora Patrícia Bacelar, depoimentos de pacientes, além de uma galeria de imagens que evidencia o ambiente acolhedor do espaço físico da clínica."
+                            description="O website da clínica Patrícia Bacelar Psicologia Clínica está a ser desenvolvido com o objetivo de oferecer uma experiência de navegação clara e intuitiva, alinhada à identidade visual da clínica. Nele, os utilizadores encontram informações detalhadas sobre os serviços de psicologia clínica oferecidos, apresentação da Doutora Patrícia Bacelar, depoimentos de pacientes, além de uma galeria de imagens que evidencia o ambiente acolhedor do espaço físico da clínica."
                             github="https://github.com/1241330/website_patricia_bacelar_psicologia"
                         />
 
