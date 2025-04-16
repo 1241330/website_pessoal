@@ -60,7 +60,7 @@ export default function Home() {
                 </section>
 
                 {/* About Me */}
-                <section className="w-full max-w-4xl mx-auto mb-12 px-4" id="about">
+                <section className="w-full max-w-4xl mx-auto px-4" id="about">
                     <h2 className="text-3xl font-semibold mt-0 mb-6 border-b pb-2">About Me</h2>
                     <p className="text-lg leading-relaxed text-justify">
                         Currently, I am a first-year student of Computer Engineering at the Higher Institute of Engineering of Porto.
@@ -136,7 +136,7 @@ export default function Home() {
                 </section>
 
                 {/* Timeline */}
-                <section className="w-full max-w-4xl mx-auto mb-12 px-4" id="timeline">
+                <section className="w-full max-w-4xl mx-auto px-4" id="timeline">
                     <h2 className="text-3xl font-semibold mb-6 border-b pb-2">Timeline</h2>
                     <div className="relative border-l-4 border-neutral-700 pl-6 space-y-10">
                         {[
