@@ -1,0 +1,227 @@
+'use client';
+
+import { useState } from 'react';
+import Head from 'next/head';
+import { Moon, Sun } from 'lucide-react';
+
+export default function Home() {
+    const [darkMode, setDarkMode] = useState(true);
+
+    return (
+        <>
+            <Head>
+                <title>Meu Portfólio</title>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+                    rel="stylesheet"
+                />
+            </Head>
+
+            <main className={`${darkMode ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen font-mono transition-colors duration-500`}>
+                {/* Toggle de tema */}
+                <div className="p-4 flex justify-end">
+                    <button
+                        onClick={() => setDarkMode(!darkMode)}
+                        className="rounded-full border p-2 hover:scale-110 transition"
+                        aria-label="Alternar modo claro/escuro"
+                    >
+                        {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+                    </button>
+                </div>
+
+                {/* Hero */}
+                <section className="text-center mb-12">
+                    <h1 className="text-5xl font-bold mb-4">Olá, eu sou a Carlota!</h1>
+                    <p className="text-xl mb-4">Estudante do 1º ano da licenciatura de Engenharia Informática </p>
+                    <div className="flex justify-center gap-4">
+                        <a href="https://github.com/1241330" target="_blank" rel="noopener noreferrer"
+                           className="px-4 py-2 border rounded hover:bg-gray-200 hover:text-black transition"
+                        >
+                            GitHub
+                        </a>
+                        <a href="www.linkedin.com/in/carlotamlemos" target="_blank" rel="noopener noreferrer"
+                           className="px-4 py-2 border rounded hover:bg-gray-200 hover:text-black transition"
+                        >
+                            LinkedIn
+                        </a>
+                    </div>
+                </section>
+
+                {/* Skills */}
+                <section className="w-full max-w-4xl mx-auto mb-12 px-4">
+                    <h2 className="text-3xl font-semibold mb-4 border-b pb-2">Skills</h2>
+                    <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                        <li className="bg-gray-200 text-black rounded-xl p-4 shadow-md">HTML</li>
+                        <li className="bg-gray-200 text-black rounded-xl p-4 shadow-md">CSS</li>
+                        <li className="bg-gray-200 text-black rounded-xl p-4 shadow-md">React</li>
+                        <li className="bg-gray-200 text-black rounded-xl p-4 shadow-md">Next.js</li>
+                        <li className="bg-gray-200 text-black rounded-xl p-4 shadow-md">Tailwind</li>
+                        <li className="bg-gray-200 text-black rounded-xl p-4 shadow-md">Python</li>
+                        <li className="bg-gray-200 text-black rounded-xl p-4 shadow-md">Java</li>
+                        <li className="bg-gray-200 text-black rounded-xl p-4 shadow-md">GitHub</li>
+                        <li className="bg-gray-200 text-black rounded-xl p-4 shadow-md">Scrum</li>
+                        <li className="bg-gray-200 text-black rounded-xl p-4 shadow-md">Wordpress</li>
+
+                    </ul>
+                </section>
+
+                {/* Timeline */}
+                <section className="w-full max-w-4xl mx-auto mb-12 px-4">
+                    <h2 className="text-3xl font-semibold mb-4 border-b pb-2">Timeline</h2>
+                    <div className="border-l-2 pl-4">
+                        <div className="mb-6 relative">
+                            <div className="absolute -left-2 w-4 h-4 bg-blue-500 rounded-full top-1.5"></div>
+                            <h3 className="text-xl font-bold">11 de abril de 2025 - 14 de abril de 2025</h3>
+                            <p>Participação no Encontro Nacional de Estudantes de Engenharia Informática</p>
+                            <p className="text-sm text-gray-400 mt-2">Instituto Superior de Engenharia do Porto &
+                                Faculdade de Engenharia da Universidade do Porto</p>
+                            <p className="text-sm text-gray-400">Porto, Portugal</p>
+                            <a href="#" className="text-sm text-blue-400 mt-3 underline">Certificado de Participação</a>
+                        </div>
+                        <div className="mb-6 relative">
+                            <div className="absolute -left-2 w-4 h-4 bg-blue-500 rounded-full top-1.5"></div>
+                            <h3 className="text-xl font-bold">out de 2024 - o momento</h3>
+                            <p>Membro do Núcleo de Estudantes de Informática do ISEP (NEI-ISEP)</p>
+                            <p className="text-sm text-gray-400 mt-2">Instituto Superior de Engenharia do Porto</p>
+                            <p className="text-sm text-gray-400">Porto, Portugal</p>
+                        </div>
+                        <div className="mb-6 relative">
+                            <div className="absolute -left-2 w-4 h-4 bg-blue-500 rounded-full top-1.5"></div>
+                            <h3 className="text-xl font-bold">set de 2024 - o momento</h3>
+                            <p>Licenciatura de Engenharia Informática</p>
+                            <p className="text-sm text-gray-400 mt-2">Instituto Superior de Engenharia do Porto</p>
+                            <p className="text-sm text-gray-400">Porto, Portugal</p>
+                            <p className="text-sm text-gray-400 mt-2">Média Atual: 13.66 / 20.00</p>
+                        </div>
+                        <div className="mb-6 relative">
+                        <div className="absolute -left-2 w-4 h-4 bg-blue-500 rounded-full top-1.5"></div>
+                            <h3 className="text-xl font-bold">set de 2021 - jun de 2024</h3>
+                            <p>Ensino Secundário na área de Economia</p>
+                            <p className="text-sm text-gray-400 mt-2">Escola Secundária de Santa Maria Maior</p>
+                            <p className="text-sm text-gray-400">Viana do Castelo, Portugal</p>
+                            <p className="text-sm text-gray-400 mt-2">Nota final: 17.8 / 20.00</p>
+
+                        </div>
+                    </div>
+                </section>
+
+                import { useState } from 'react';
+
+                export default function Projetos() {
+                const [descriptionOpen1, setDescriptionOpen1] = useState(false);
+                const [descriptionOpen2, setDescriptionOpen2] = useState(false);
+                const [descriptionOpen3, setDescriptionOpen3] = useState(false);
+                const [descriptionOpen4, setDescriptionOpen4] = useState(false);
+
+                return (
+                <section className="w-full max-w-4xl mx-auto mb-12 px-4">
+                <h2 className="text-3xl font-semibold mb-4 border-b pb-2">Projetos</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Projeto 1 */}
+                <div className="bg-gray-200 text-black rounded-xl p-6 shadow-md">
+                    <h3 className="text-2xl font-bold mb-2">
+                        Website Patrícia Bacelar Psicologia Clínica
+                    </h3>
+                    <p className="text-m text-blue-400">abr de 2024 - o momento</p>
+                    <div className="project-description">
+                        <p>
+                            O website da clínica Patrícia Bacelar Psicologia Clínica foi desenvolvido com o objetivo de oferecer uma experiência de navegação clara, intuitiva e humanizada, alinhada à identidade visual da clínica. Nele, os utilizadores encontram informações detalhadas sobre os serviços de psicologia clínica oferecidos, apresentação da Doutora Patrícia Bacelar, depoimentos de pacientes, além de uma galeria de imagens que evidencia o ambiente acolhedor do espaço físico da clínica.
+                        </p>
+                        <p>
+                            Do ponto de vista técnico, o site foi construído com tecnologias modernas e responsivas, garantindo desempenho otimizado em diferentes dispositivos e navegadores.
+                        </p>
+                        {descriptionOpen1 && (
+                            <p className="mt-2">
+                                O site utiliza uma interface limpa e intuitiva, com foco na experiência do utilizador, oferecendo fácil acesso às informações relevantes, incluindo a descrição da equipa, serviços e áreas de atuação.
+                            </p>
+                        )}
+                        <button
+                            className="text-blue-500 mt-2"
+                            onClick={() => setDescriptionOpen1(!descriptionOpen1)}
+                        >
+                            {descriptionOpen1 ? "Fechar descrição" : "Abrir descrição"} &#8595;
+                        </button>
+                    </div>
+                </div>
+
+                {/* Projeto 2 */}
+                <div className="bg-gray-200 text-black rounded-xl p-6 shadow-md">
+                    <h3 className="text-2xl font-bold mb-2">
+                        Projeto no âmbito da Unidade Curricular de Laboratório/Projeto I
+                    </h3>
+                    <p className="text-m text-blue-400">dez de 2024 - jan de 2025</p>
+                    <div className="project-description">
+                        <p>
+                            No contexto da unidade curricular Laboratório/Projeto I, desenvolvi, juntamente com uma equipa de três colegas, uma aplicação centrada na reconstrução e identificação de imagens através da técnica de eigenfaces. O projeto visou explorar métodos de decomposição de matrizes e aplicar algoritmos de reconhecimento de padrões em imagens digitais.
+                        </p>
+                        {descriptionOpen2 && (
+                            <p className="mt-2">
+                                A aplicação inclui funcionalidades como a decomposição própria de matrizes simétricas, reconstrução de imagens com diferentes números de eigenfaces e identificação da imagem mais semelhante dentro de uma base de dados, com exportação dos resultados em CSV e JPG.
+                            </p>
+                        )}
+                        <button
+                            className="text-blue-500 mt-2"
+                            onClick={() => setDescriptionOpen2(!descriptionOpen2)}
+                        >
+                            {descriptionOpen2 ? "Fechar descrição" : "Abrir descrição"} &#8595;
+                        </button>
+                    </div>
+                </div>
+
+                {/* Projeto 3 */}
+                <div className="bg-gray-200 text-black rounded-xl p-6 shadow-md">
+                    <h3 className="text-2xl font-bold mb-2">
+                        Website Núcleo de Estudantes de Informática do ISEP
+                    </h3>
+                    <p className="text-m text-blue-400">abr de 2024 - o momento</p>
+                    <div className="project-description">
+                        <p>
+                            Integro a equipa responsável pela reestruturação do site do NEI-ISEP. O objetivo deste projeto é melhorar a experiência do utilizador, focando-se na otimização da navegação e da acessibilidade, enquanto se preserva a identidade visual do núcleo.
+                        </p>
+                        {descriptionOpen3 && (
+                            <p className="mt-2">
+                                Estamos trabalhando para criar um design mais moderno e intuitivo, além de melhorar a performance do site, garantindo maior acessibilidade e usabilidade para os seus visitantes.
+                            </p>
+                        )}
+                        <button
+                            className="text-blue-500 mt-2"
+                            onClick={() => setDescriptionOpen3(!descriptionOpen3)}
+                        >
+                            {descriptionOpen3 ? "Fechar descrição" : "Abrir descrição"} &#8595;
+                        </button>
+                    </div>
+                </div>
+
+                {/* Projeto 4 */}
+                <div className="bg-gray-200 text-black rounded-xl p-6 shadow-md">
+                    <h3 className="text-2xl font-bold mb-2">
+                        Projeto Integrador 2º semestre 2024/2025
+                    </h3>
+                    <p className="text-m text-blue-400">mar de 2024 - o momento</p>
+                    <div className="project-description">
+                        <p>
+                            Projeto desenvolvido em equipa no âmbito das unidades curriculares LAPR2, ESOFT, PPROG, MATCP e MDISC, com o objetivo de criar uma solução que simula o funcionamento de redes ferroviárias. A aplicação permite editar mapas com cidades e indústrias, definir cenários com restrições históricas e tecnológicas, e simular o transporte de mercadorias e passageiros através de estações, linhas e comboios.
+                        </p>
+                        {descriptionOpen4 && (
+                            <p className="mt-2">
+                                O projeto é desenvolvido com foco em boas práticas de engenharia de software, utilizando conceitos como TDD (Test-Driven Development), modularidade e documentação. Também inclui um módulo de análise estatística, desenvolvido em Python utilizando Jupyter Notebook, permitindo avaliar o desempenho da rede ferroviária com base em dados reais.
+                            </p>
+                        )}
+                        <button
+                            className="text-blue-500 mt-2"
+                            onClick={() => setDescriptionOpen4(!descriptionOpen4)}
+                        >
+                            {descriptionOpen4 ? "Fechar descrição" : "Abrir descrição"} &#8595;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+</main>
+        </>
+    );
+}
+
