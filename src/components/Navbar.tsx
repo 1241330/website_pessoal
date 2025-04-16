@@ -1,4 +1,4 @@
-import { Link } from 'react-scroll';
+const { Link } = require('react-scroll');
 
 
 const Navbar = () => {
