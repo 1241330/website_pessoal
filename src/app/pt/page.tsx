@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import Head from 'next/head';
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 
 
 
@@ -31,7 +31,7 @@ export default function Home() {
                 className="bg-black text-white min-h-screen font-mono transition-colors duration-500">
                 {/* Hero */}
                 <section className="text-center mb-12" id="inicio">
-                    <h1 className="text-5xl font-bold mt-30 mb-4">Olá, eu sou a Carlota!</h1>
+                    <h1 className="text-5xl font-bold mt-35 mb-4">Olá, eu sou a Carlota!</h1>
                     <p className="text-xl mt-4 mb-4">Estudante do 1º ano da licenciatura de<span className="text-purple-400"> Engenharia
                         Informática</span></p>
                     <div className="flex justify-center gap-4">
@@ -164,7 +164,6 @@ export default function Home() {
                                 desc: 'Licenciatura de Engenharia Informática',
                                 loc: 'Instituto Superior de Engenharia do Porto',
                                 city: 'Porto, Portugal',
-                                grade: 'Média Atual: 14 / 20',
                                 image: 'isep_logo.png',
                             },
                             {
