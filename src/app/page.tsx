@@ -22,7 +22,8 @@ export default function Home() {
                 />
             </Head>
 
-            <main className={`${darkMode ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen font-mono transition-colors duration-500`}>
+            <main
+                className={`${darkMode ? 'bg-black text-white' : 'bg-white text-black'} min-h-screen font-mono transition-colors duration-500`}>
                 {/* Toggle Tema */}
                 <div className="p-4 flex justify-end">
                     <button
@@ -30,7 +31,7 @@ export default function Home() {
                         className="rounded-full border p-2 hover:scale-110 transition"
                         aria-label="Alternar modo claro/escuro"
                     >
-                        {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+                        {darkMode ? <Sun size={20}/> : <Moon size={20}/>}
                     </button>
                 </div>
 
@@ -60,14 +61,14 @@ export default function Home() {
 
                 {/* Skills */}
                 <section className="w-full max-w-4xl mx-auto mb-12 px-4">
-                    <h2 className="text-3xl font-semibold mb-4 border-b pb-2">Skills</h2>
+                    <h2 className="text-3xl font-semibold mb-4 border-b pb-2">Hard Skills</h2>
                     <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
                         {[
                             'HTML',
                             'CSS',
                             'React',
                             'Next.js',
-                            'Tailwind',
+                            'Tailwind CSS',
                             'Python',
                             'Java',
                             'GitHub',
@@ -81,10 +82,31 @@ export default function Home() {
                     </ul>
                 </section>
 
+                {/* Línguas */}
+
+                <section className="w-full max-w-4xl mx-auto mb-12 px-4">
+                    <h2 className="text-3xl font-semibold mb-6 border-b pb-2">Línguas</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                        {[
+                            {idioma: 'Português', nivel: 'Nativo', cor: 'bg-green-200'},
+                            {idioma: 'Inglês', nivel: 'Avançado (B2)', cor: 'bg-blue-200'},
+                            {idioma: 'Espanhol', nivel: 'Básico (A2)', cor: 'bg-yellow-200'},
+                        ].map((lingua, i) => (
+                            <div
+                                key={i}
+                                className={`rounded-xl p-6 shadow-lg transform transition-transform hover:scale-105 ${lingua.cor} text-black`}
+                            >
+                                <h3 className="text-xl font-bold mb-2">{lingua.idioma}</h3>
+                                <p className="text-md">{lingua.nivel}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
                 {/* Timeline */}
                 <section className="w-full max-w-4xl mx-auto mb-12 px-4">
-                    <h2 className="text-3xl font-semibold mb-4 border-b pb-2">Timeline</h2>
-                    <div className="border-l-2 pl-4">
+                    <h2 className="text-3xl font-semibold mb-6 border-b pb-2">Timeline</h2>
+                    <div className="relative border-l-4 border-neutral-700 pl-6 space-y-10">
                         {[
                             {
                                 title: '11 de abril de 2025 - 14 de abril de 2025',
@@ -92,19 +114,22 @@ export default function Home() {
                                 loc: 'Instituto Superior de Engenharia do Porto & Faculdade de Engenharia da Universidade do Porto',
                                 city: 'Porto, Portugal',
                                 cert: true,
+                                image: 'enei_logo.jpeg',
                             },
                             {
-                                title: 'out de 2024 - o momento',
+                                title: 'out de 2024 - presente',
                                 desc: 'Membro do Núcleo de Estudantes de Informática do ISEP (NEI-ISEP)',
                                 loc: 'Instituto Superior de Engenharia do Porto',
                                 city: 'Porto, Portugal',
+                                image: 'nei_logo.png',
                             },
                             {
-                                title: 'set de 2024 - o momento',
+                                title: 'set de 2024 - presente',
                                 desc: 'Licenciatura de Engenharia Informática',
                                 loc: 'Instituto Superior de Engenharia do Porto',
                                 city: 'Porto, Portugal',
                                 grade: 'Média Atual: 14 / 20',
+                                image: 'isep_logo.png',
                             },
                             {
                                 title: 'set de 2021 - jun de 2024',
@@ -112,20 +137,33 @@ export default function Home() {
                                 loc: 'Escola Secundária de Santa Maria Maior',
                                 city: 'Viana do Castelo, Portugal',
                                 grade: 'Nota final: 17.8 / 20',
+                                image: 'liceu_logo.png',
                             },
                         ].map((item, i) => (
-                            <div key={i} className="mb-6 relative">
-                                <div className="absolute -left-2 w-4 h-4 bg-blue-500 rounded-full top-1.5"></div>
-                                <h3 className="text-xl font-bold">{item.title}</h3>
-                                <p>{item.desc}</p>
-                                <p className="text-sm text-gray-400 mt-2">{item.loc}</p>
-                                <p className="text-sm text-gray-400">{item.city}</p>
-                                {item.grade && <p className="text-sm text-gray-400 mt-2">{item.grade}</p>}
-                                {item.cert && (
-                                    <a href="#" className="text-sm text-blue-400 mt-3 underline">
-                                        Certificado de Participação
-                                    </a>
-                                )}
+                            <div key={i} className="relative pl-8">
+                                {/* Image */}
+                                <div className="absolute -left-[42px] top-[14px] flex items-center justify-center">
+                                    <img
+                                        src={item.image}
+                                        alt="Icon"
+                                        className="w-8 h-8 rounded-full"
+                                    />
+                                </div>
+                                {/* Card */}
+                                <div className="bg-neutral-900 rounded-xl p-4 shadow-md">
+                                    <h3 className="text-lg font-bold text-white">{item.title}</h3>
+                                    <p className="text-base text-gray-200 mt-1">{item.desc}</p>
+                                    <p className="text-sm text-gray-400 mt-2">{item.loc}</p>
+                                    <p className="text-sm text-gray-400">{item.city}</p>
+                                    {item.grade && (
+                                        <p className="text-sm text-gray-300 mt-2">{item.grade}</p>
+                                    )}
+                                    {item.cert && (
+                                        <a href="#" className="text-sm text-blue-400 underline mt-2 inline-block">
+                                            Certificado de Participação
+                                        </a>
+                                    )}
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -181,7 +219,7 @@ export default function Home() {
     );
 }
 
-function Projeto({ title, period, open, setOpen, description, extra }: any) {
+function Projeto({title, period, open, setOpen, description, extra}: any) {
     return (
         <div className="bg-gray-200 text-black rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-bold mb-2">{title}</h3>
