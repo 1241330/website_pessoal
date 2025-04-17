@@ -211,7 +211,7 @@ export default function Home() {
                         {/* Projeto 1 */}
                         <Projeto
                             title="Website Patrícia Bacelar Psicologia Clínica"
-                            period="abr de 2024 - presente"
+                            period="abr de 2024 - o momento"
                             open={descriptionOpen1}
                             setOpen={setDescriptionOpen1}
                             description="O website da clínica Patrícia Bacelar Psicologia Clínica está a ser desenvolvido com o objetivo de oferecer uma experiência de navegação clara e intuitiva, alinhada à identidade visual da clínica. Nele, os utilizadores encontram informações detalhadas sobre os serviços de psicologia clínica oferecidos, apresentação da Doutora Patrícia Bacelar, depoimentos de pacientes, além de uma galeria de imagens que evidencia o ambiente acolhedor do espaço físico da clínica."
@@ -221,7 +221,7 @@ export default function Home() {
                         {/* Projeto 2 */}
                         <Projeto
                             title="Website NEI-ISEP"
-                            period="dez de 2024 - jan de 2025"
+                            period="abr de 2025 - o momento"
                             open={descriptionOpen2}
                             setOpen={setDescriptionOpen2}
                             description="Integro a equipa responsável pela reestruturação do site do Núcleo de Estudantes de Informática do ISEP. O objetivo deste projeto é melhorar a experiência do utilizador, focando-se na otimização da navegação e da acessibilidade, enquanto se preserva a identidade visual do núcleo."
@@ -242,11 +242,11 @@ export default function Home() {
                         {/* Projeto 4 */}
                         <Projeto
                             title="Projeto Integrador do 2º semestre 2024/2025"
-                            period="mar de 2024 - presente"
+                            period="abr de 2025 - o momento"
                             open={descriptionOpen4}
                             setOpen={setDescriptionOpen4}
-                            description="Projeto em desenvolvimento em equipa no âmbito das unidades curriculares Laboratório/Projeto II (LAPR2), Engenharia de Softwares (ESOFT), Paradigmas da Programação (PPROG), Matemática Computacional (MATCP) e Matemática Discreta (MDISC), com o objetivo de criar uma solução que simula o funcionamento de redes ferroviárias."
-                            github=""
+                            description="Projecto em desenvolvimento em equipa no âmbito das unidades curriculares Laboratório/Projecto II (LAPR2), Engenharia de Software (ESOFT), Paradigmas de Programação (PPROG), Matemática Computacional (MATCP) e Matemática Discreta (MDISC), com o objectivo de criar uma solução que simule o funcionamento das redes ferroviárias."
+                            github="https://github.com/1241330"
                         />
                     </div>
                 </section>

@@ -202,7 +202,7 @@ export default function Home() {
                         {/* Project 1 */}
                         <Project
                             title="Patrícia Bacelar Psicologia Clínica Website"
-                            period="April 2024 - Present"
+                            period="apr 2025 - present"
                             open={descriptionOpen1}
                             setOpen={setDescriptionOpen1}
                             description="The website for the Patrícia Bacelar Psicologia Clínica is being developed with the goal of providing a clear and intuitive browsing experience, aligned with the clinic's visual identity. It offers users detailed information about the clinical psychology services, introduces Dr. Patrícia Bacelar, displays patient testimonials, and features a gallery that highlights the clinic’s welcoming physical environment."
@@ -212,7 +212,7 @@ export default function Home() {
                         {/* Project 2 */}
                         <Project
                             title="NEI-ISEP Website"
-                            period="December 2024 - January 2025"
+                            period="apr 2025 - present"
                             open={descriptionOpen2}
                             setOpen={setDescriptionOpen2}
                             description="I am part of the team responsible for restructuring the website of the Núcleo de Estudantes de Engenharia do Porto. This project aims to enhance the user experience by focusing on improving navigation and accessibility while preserving the association’s visual identity."
@@ -222,7 +222,7 @@ export default function Home() {
                         {/* Project 3 */}
                         <Project
                             title="Laboratory/Project I"
-                            period="December 2024 - January 2025"
+                            period="dec 2024 - jan 2025"
                             open={descriptionOpen3}
                             setOpen={setDescriptionOpen3}
                             description="As part of the Laboratory/Project I course, I, along with three colleagues, developed a Java application focused on the reconstruction and identification of images using the Eigenfaces technique. The project received the highest possible grade, 20 /20."
@@ -232,7 +232,7 @@ export default function Home() {
                         {/* Project 4 */}
                         <Project
                             title="Integrator Project 2nd semester 2024/2025"
-                            period="March 2024 - Present"
+                            period="apr 2025 - present"
                             open={descriptionOpen4}
                             setOpen={setDescriptionOpen4}
                             description="Project under development by a team within the curricular units Laboratory/Project II (LAPR2), Software Engineering (ESOFT), Programming Paradigms (PPROG), Computational Mathematics (MATCP) and Discrete Mathematics (MDISC), with the aim of creating a solution that simulates the functioning of railway networks."
