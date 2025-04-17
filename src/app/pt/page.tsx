@@ -211,7 +211,7 @@ export default function Home() {
                         {/* Projeto 1 */}
                         <Projeto
                             title="Website Patrícia Bacelar Psicologia Clínica"
-                            period="abr de 2024 - o momento"
+                            period="abr de 2025 - o momento"
                             open={descriptionOpen1}
                             setOpen={setDescriptionOpen1}
                             description="O website da clínica Patrícia Bacelar Psicologia Clínica está a ser desenvolvido com o objetivo de oferecer uma experiência de navegação clara e intuitiva, alinhada à identidade visual da clínica. Nele, os utilizadores encontram informações detalhadas sobre os serviços de psicologia clínica oferecidos, apresentação da Doutora Patrícia Bacelar, depoimentos de pacientes, além de uma galeria de imagens que evidencia o ambiente acolhedor do espaço físico da clínica."
