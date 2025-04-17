@@ -110,3 +110,6 @@ footer {
   color: #fff;
   text-align: center;
 }
+html {
+  scroll-behavior: smooth;
+}
