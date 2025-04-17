@@ -49,7 +49,7 @@ export default function Home() {
                             LinkedIn
                         </a>
                         <a
-                            href="/updated_cv.pdf"
+                            href="/cv_carlotajmlemos.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-4 py-2 border rounded hover:bg-green-400 hover:text-black transition"
