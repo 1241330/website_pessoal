@@ -235,7 +235,7 @@ export default function Home() {
                             period="March 2024 - Present"
                             open={descriptionOpen4}
                             setOpen={setDescriptionOpen4}
-                            description="A team project developed in the context of the LAPR2, ESOFT, PPROG, MATCP, and MDISC courses, aiming to create a solution that simulates the operation of railway networks."
+                            description="Project under development by a team within the curricular units Laboratory/Project II (LAPR2), Software Engineering (ESOFT), Programming Paradigms (PPROG), Computational Mathematics (MATCP) and Discrete Mathematics (MDISC), with the aim of creating a solution that simulates the functioning of railway networks."
                             github="https://github.com/1241330"
                         />
                     </div>
