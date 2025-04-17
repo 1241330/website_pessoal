@@ -243,7 +243,7 @@ export default function Home() {
 
                 {/* Galeria */}
                 <section className="w-full max-w-4xl mx-auto mb-12 px-4" id="gallery">
-                    <h2 className="text-3xl font-semibold mb-6 border-b pb-2">Photo Galery</h2>
+                    <h2 className="text-3xl font-semibold mb-6 border-b pb-2">Photo Gallery</h2>
 
                     <div className="mb-8">
                         <h3 className="text-2xl font-bold mb-4">National Meeting of Computer Engineering Students 2025</h3>
