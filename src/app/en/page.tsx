@@ -259,7 +259,7 @@ export default function Home() {
                         </a>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
-                            {['pagina_inicial_1.png', 'pagina_inicial_2.png', 'apresentação.png', 'galeria.png', 'consultas.png', 'marcacoes.png', 'faqs.png', 'contactos.png', 'footer.png'].map((img, i) => (
+                            {['pagina_inicial_1.png', 'pagina_inicial_2.png', 'apresentacao.png', 'galeria.png', 'consultas.png', 'marcacoes.png', 'faqs.png', 'contactos.png', 'footer.png'].map((img, i) => (
                                 <img
                                     key={i}
                                     src={`/galeria/${img}`}
