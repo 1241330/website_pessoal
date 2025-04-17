@@ -38,7 +38,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="p-8 fixed w-full top-0 z-50 border font-mono bg-black">
+        <nav className="p-8 fixed w-full top-0 z-50 border border-gray-400 font-mono bg-black">
             <div className="relative max-w-7xl mx-auto flex items-center justify-between">
                 {/* Idioma */}
                 <div className="relative" ref={langRef}>
@@ -50,16 +50,21 @@ const Navbar = () => {
                     </button>
                     {isLangOpen && (
                         <div className="absolute mt-2 bg-black text-white rounded shadow-md">
-                            <button onClick={() => changeLanguage('pt')} className="block px-4 py-2 hover:bg-gray-600 w-full text-left">PT</button>
-                            <button onClick={() => changeLanguage('en')} className="block px-4 py-2 hover:bg-gray-600 w-full text-left">EN</button>
+                            <button onClick={() => changeLanguage('pt')}
+                                    className="block px-4 py-2 hover:bg-gray-600 w-full text-left">PT
+                            </button>
+                            <button onClick={() => changeLanguage('en')}
+                                    className="block px-4 py-2 hover:bg-gray-600 w-full text-left">EN
+                            </button>
                         </div>
                     )}
                 </div>
 
                 {/* Botão mobile */}
                 <button className="md:hidden text-white z-50" onClick={toggleMenu}>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
                 </button>
 
@@ -76,7 +81,8 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div ref={menuRef} className="md:hidden fixed top-16 left-0 right-0 z-40 bg-black p-6 flex flex-col space-y-4 text-white">
+                <div ref={menuRef}
+                     className="md:hidden fixed top-16 left-0 right-0 z-40 bg-black p-6 flex flex-col space-y-4 text-white border-t-4 border-gray-400">
                     <a href={`/${language}`} className="hover:text-gray-200" onClick={closeMenu}>Início</a>
                     <a href={`/${language}`} className="hover:text-gray-200" onClick={closeMenu}>Sobre Mim</a>
                     <a href={`/${language}`} className="hover:text-gray-200" onClick={closeMenu}>Hard Skills</a>
@@ -86,8 +92,12 @@ const Navbar = () => {
 
                     {/* Idiomas no mobile */}
                     <div className="mt-4">
-                        <button onClick={() => changeLanguage('pt')} className="block text-white hover:bg-gray-600 w-full py-2">PT</button>
-                        <button onClick={() => changeLanguage('en')} className="block text-white hover:bg-gray-600 w-full py-2">EN</button>
+                        <button onClick={() => changeLanguage('pt')}
+                                className="block text-white hover:bg-gray-600 w-full py-2">PT
+                        </button>
+                        <button onClick={() => changeLanguage('en')}
+                                className="block text-white hover:bg-gray-600 w-full py-2">EN
+                        </button>
                     </div>
                 </div>
             )}
