@@ -194,7 +194,7 @@ export default function Home() {
                                         <p className="text-sm text-gray-300 mt-2">{item.grade}</p>
                                     )}
                                     {item.cert && (
-                                        <a href="#" className="text-sm text-blue-400 underline mt-2 inline-block">
+                                        <a href="/certificado_enei2025.pdf" className="text-sm text-blue-400 underline mt-2 inline-block">
                                             Certificado de Participação
                                         </a>
                                     )}
