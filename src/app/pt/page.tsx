@@ -289,7 +289,7 @@ export default function Home() {
                     {/* Projeto 4: Projeto Integrador */}
                     <div className="mb-8">
                         <h3 className="text-2xl font-bold mb-4">Projeto Integrador 2º semestre (Railroad Simulator)</h3>
-                        <p className="text-xl mb-4">Em desenvolvimento...👩‍💻</p>
+                        <p className="text-xl pb-4">Em desenvolvimento...👩‍💻</p>
                     </div>
                 </section>
             </main>

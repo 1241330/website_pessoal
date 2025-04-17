@@ -247,8 +247,8 @@ export default function Home() {
 
                     {/* Projeto 1: Patrícia Bacelar */}
                     <div className="mb-8">
-                        <h3 className="text-2xl font-bold mb-4">Website Patrícia Bacelar Psicologia Clínica</h3>
-                        <p className="text-xl mb-2">Em desenvolvimento...👩‍💻</p>
+                        <h3 className="text-2xl font-bold mb-4">Patrícia Bacelar Psicologia Clínica Website </h3>
+                        <p className="text-xl mb-2">In progress...👩‍💻</p>
                         <a
                             href="https://patriciabacelarpsicologia.netlify.app/"
                             className="text-blue-400 font-bold hover:underline text-base pb-4"
@@ -272,14 +272,14 @@ export default function Home() {
 
                     {/* Projeto 2: NEI-ISEP */}
                     <div className="mb-8">
-                        <h3 className="text-2xl font-bold mb-4">Website NEI-ISEP</h3>
-                        <p className="text-xl mb-4">Em desenvolvimento...👩‍💻</p>
+                        <h3 className="text-2xl font-bold mb-4">NEI-ISEP Website</h3>
+                        <p className="text-xl mb-4">In progress...👩‍💻</p>
                     </div>
 
                     {/* Projeto 4: Projeto Integrador */}
                     <div className="mb-8">
-                        <h3 className="text-2xl font-bold mb-4">Projeto Integrador 2º semestre (Railroad Simulator)</h3>
-                        <p className="text-xl mb-4">Em desenvolvimento...👩‍💻</p>
+                        <h3 className="text-2xl font-bold mb-4">Integrator Project 2nd semester 2024/2025</h3>
+                        <p className="text-xl pb-4">In progress...👩‍💻</p>
                     </div>
                 </section>
             </main>
