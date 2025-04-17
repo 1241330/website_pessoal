@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 
-
 // Componente principal da Home
 export default function Home() {
     const [descriptionOpen1, setDescriptionOpen1] = useState(false);
@@ -28,10 +27,10 @@ export default function Home() {
             <Navbar />
 
             <main
-                className="bg-black text-white min-h-screen font-mono transition-colors duration-500">
+                className="bg-black text-white min-h-screen font-mono transition-colors duration-500 pt-0">
                 {/* Hero */}
                 <section className="text-center mb-12" id="inicio">
-                    <h1 className="text-5xl font-bold mt-30 mb-4">Olá, eu sou a Carlota!</h1>
+                    <h1 className="text-5xl font-bold pt-30 mb-4">Olá, eu sou a Carlota!</h1>
                     <p className="text-xl mt-4 mb-4">Estudante do 1º ano da licenciatura de<span className="text-purple-400"> Engenharia
                         Informática</span></p>
                     <div className="flex justify-center gap-4">
@@ -206,7 +205,7 @@ export default function Home() {
                 </section>
 
                 {/* Projetos */}
-                <section className="w-full max-w-4xl mx-auto mb-12 px-4" id="projetos">
+                <section className="w-full max-w-4xl mx-auto pb-12 px-4" id="projetos">
                     <h2 className="text-3xl font-semibold mb-4 border-b pb-2">Projetos</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Projeto 1 */}

@@ -29,7 +29,7 @@ export default function Home() {
                 className="bg-black text-white min-h-screen font-mono transition-colors duration-500">
                 {/* Hero */}
                 <section className="text-center" id="start">
-                    <h1 className="text-5xl font-bold mt-35 mb-4">Hello, I am Carlota!</h1>
+                    <h1 className="text-5xl font-bold pt-30 mb-4">Hello, I am Carlota!</h1>
                     <p className="text-xl mt-4 mb-4">First-year student of <span className="text-purple-400">Computer Engineering</span></p>
                     <div className="flex justify-center gap-4">
                         <a
@@ -66,7 +66,7 @@ export default function Home() {
                         Currently, I am a first-year student of Computer Engineering at the Higher Institute of Engineering of Porto.
                         From an early age, I developed a particular interest in <span className="text-purple-400 font-semibold">front-end</span> development,
                         a field where I found a perfect combination of creativity and technology. My involvement in the
-                        <span className="font-semibold text-cyan-400"> Computer Engineering Students' Association of ISEP (NEI-ISEP)</span> was a valuable opportunity,
+                        <span className="font-semibold text-cyan-400"> Núcleo de Estudantes de Informática do ISEP (NEI-ISEP)</span> was a valuable opportunity,
                         not only for allowing me to collaborate with peers on real projects but also for providing me with the learning
                         of a new programming language.
                         <br /><br />
@@ -196,7 +196,7 @@ export default function Home() {
                 </section>
 
                 {/* Projects */}
-                <section className="w-full max-w-4xl mx-auto mb-12 px-4" id="projects">
+                <section className="w-full max-w-4xl mx-auto pb-12 px-4" id="projects">
                     <h2 className="text-3xl font-semibold mb-4 border-b pb-2">Projects</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Project 1 */}

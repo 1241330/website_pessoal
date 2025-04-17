@@ -22,7 +22,6 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -71,7 +70,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('/path-to-your-background.jpg') center center no-repeat;
   background-size: cover;
 }
 

@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 
@@ -64,24 +65,24 @@ const Navbar = () => {
 
                 {/* Links - Desktop */}
                 <div className="hidden md:flex space-x-6 ml-auto">
-                    <a href={`/${language}`} className="text-white hover:text-gray-200 cursor-pointer">Início</a>
-                    <a href={`/${language}`} className="text-white hover:text-gray-200 cursor-pointer">Sobre Mim</a>
-                    <a href={`/${language}`} className="text-white hover:text-gray-200 cursor-pointer">Hard Skills</a>
-                    <a href={`/${language}`} className="text-white hover:text-gray-200 cursor-pointer">Línguas</a>
-                    <a href={`/${language}`} className="text-white hover:text-gray-200 cursor-pointer">Timeline</a>
-                    <a href={`/${language}`} className="text-white hover:text-gray-200 cursor-pointer">Projetos</a>
+                    <a href={`/${language}`} className="text-white hover:text-gray-200">Início</a>
+                    <a href={`/${language}`} className="text-white hover:text-gray-200">Sobre Mim</a>
+                    <a href={`/${language}`} className="text-white hover:text-gray-200">Hard Skills</a>
+                    <a href={`/${language}`} className="text-white hover:text-gray-200">Línguas</a>
+                    <a href={`/${language}`} className="text-white hover:text-gray-200">Timeline</a>
+                    <a href={`/${language}`} className="text-white hover:text-gray-200">Projetos</a>
                 </div>
             </div>
 
             {/* Mobile Menu */}
             {isMenuOpen && (
                 <div ref={menuRef} className="md:hidden fixed top-16 left-0 right-0 z-40 bg-black p-6 flex flex-col space-y-4 text-white">
-                    <a href={`/${language}`} className="hover:text-gray-200 cursor-pointer" onClick={closeMenu}>Início</a>
-                    <a href={`/${language}`} className="hover:text-gray-200 cursor-pointer" onClick={closeMenu}>Sobre Mim</a>
-                    <a href={`/${language}`} className="hover:text-gray-200 cursor-pointer" onClick={closeMenu}>Hard Skills</a>
-                    <a href={`/${language}`} className="hover:text-gray-200 cursor-pointer" onClick={closeMenu}>Línguas</a>
-                    <a href={`/${language}`} className="hover:text-gray-200 cursor-pointer" onClick={closeMenu}>Timeline</a>
-                    <a href={`/${language}`} className="hover:text-gray-200 cursor-pointer" onClick={closeMenu}>Projetos</a>
+                    <a href={`/${language}`} className="hover:text-gray-200" onClick={closeMenu}>Início</a>
+                    <a href={`/${language}`} className="hover:text-gray-200" onClick={closeMenu}>Sobre Mim</a>
+                    <a href={`/${language}`} className="hover:text-gray-200" onClick={closeMenu}>Hard Skills</a>
+                    <a href={`/${language}`} className="hover:text-gray-200" onClick={closeMenu}>Línguas</a>
+                    <a href={`/${language}`} className="hover:text-gray-200" onClick={closeMenu}>Timeline</a>
+                    <a href={`/${language}`} className="hover:text-gray-200" onClick={closeMenu}>Projetos</a>
 
                     {/* Idiomas no mobile */}
                     <div className="mt-4">
