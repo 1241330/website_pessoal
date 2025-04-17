@@ -253,7 +253,7 @@ export default function Home() {
 
                 {/* Galeria de Projetos */}
                 <section className="w-full max-w-4xl mx-auto mb-12 px-4" id="galeria">
-                    <h2 className="text-3xl font-semibold mb-6 border-b pb-2">Galeria de Projetos</h2>
+                    <h2 className="text-3xl font-semibold mb-6 border-b pb-2">Galeria de Imagens</h2>
 
                     {/* Projeto 1: Patrícia Bacelar */}
                     <div className="mb-8">

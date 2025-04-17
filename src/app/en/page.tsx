@@ -240,6 +240,48 @@ export default function Home() {
                         />
                     </div>
                 </section>
+
+                {/* Galeria */}
+                <section className="w-full max-w-4xl mx-auto mb-12 px-4" id="galeria">
+                    <h2 className="text-3xl font-semibold mb-6 border-b pb-2">Photo Galery</h2>
+
+                    {/* Projeto 1: Patrícia Bacelar */}
+                    <div className="mb-8">
+                        <h3 className="text-2xl font-bold mb-4">Website Patrícia Bacelar Psicologia Clínica</h3>
+                        <p className="text-xl mb-2">Em desenvolvimento...👩‍💻</p>
+                        <a
+                            href="https://patriciabacelarpsicologia.netlify.app/"
+                            className="text-blue-400 font-bold hover:underline text-base pb-4"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            → Ver Website
+                        </a>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                            {['pagina_inicial_1.png', 'pagina_inicial_2.png', 'apresentação.png', 'galeria.png', 'consultas.png', 'marcacoes.png', 'faqs.png', 'contactos.png', 'footer.png'].map((img, i) => (
+                                <img
+                                    key={i}
+                                    src={`/galeria/${img}`}
+                                    alt={`Patrícia Bacelar ${i + 1}`}
+                                    className="rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
+                                />
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Projeto 2: NEI-ISEP */}
+                    <div className="mb-8">
+                        <h3 className="text-2xl font-bold mb-4">Website NEI-ISEP</h3>
+                        <p className="text-xl mb-4">Em desenvolvimento...👩‍💻</p>
+                    </div>
+
+                    {/* Projeto 4: Projeto Integrador */}
+                    <div className="mb-8">
+                        <h3 className="text-2xl font-bold mb-4">Projeto Integrador 2º semestre (Railroad Simulator)</h3>
+                        <p className="text-xl mb-4">Em desenvolvimento...👩‍💻</p>
+                    </div>
+                </section>
             </main>
             <Footer />
         </>
