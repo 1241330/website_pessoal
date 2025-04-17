@@ -245,6 +245,20 @@ export default function Home() {
                 <section className="w-full max-w-4xl mx-auto mb-12 px-4" id="gallery">
                     <h2 className="text-3xl font-semibold mb-6 border-b pb-2">Photo Galery</h2>
 
+                    <div className="mb-8">
+                        <h3 className="text-2xl font-bold mb-4">National Meeting of Computer Engineering Students 2025</h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                            {['flutter.JPG', 'flutter_1.JPEG', 'blip.JPG', 'ctf.JPEG', 'quantica.JPEG', '4.JPEG', 'olisipo.JPG'].map((img, i) => (
+                                <img
+                                    key={i}
+                                    src={`/galeria/${img}`}
+                                    alt={`ENEI2025 ${i + 1}`}
+                                    className="rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
+                                />
+                            ))}
+                        </div>
+                    </div>
+
                     {/* Projeto 1: Patrícia Bacelar */}
                     <div className="mb-8">
                         <h3 className="text-2xl font-bold mb-4">Patrícia Bacelar Psicologia Clínica Website </h3>
@@ -283,13 +297,13 @@ export default function Home() {
                     </div>
                 </section>
             </main>
-            <Footer />
+            <Footer/>
         </>
     );
 }
 
 // Project Component
-function Project({ title, period, open, setOpen, description, github }: any) {
+function Project({title, period, open, setOpen, description, github}: any) {
     return (
         <div className="bg-gray-200 text-black rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-bold mb-2">{title}</h3>
