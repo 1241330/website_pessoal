@@ -214,7 +214,7 @@ export default function Home() {
                             period="abr de 2025 - o momento"
                             open={descriptionOpen1}
                             setOpen={setDescriptionOpen1}
-                            language="TypeScript"
+                            languages={["TypeScript"]}
                             description="O website da clínica Patrícia Bacelar Psicologia Clínica está a ser desenvolvido com o objetivo de oferecer uma experiência de navegação clara e intuitiva, alinhada à identidade visual da clínica. Nele, os utilizadores encontram informações detalhadas sobre os serviços de psicologia clínica oferecidos, apresentação da Doutora Patrícia Bacelar, depoimentos de pacientes, além de uma galeria de imagens que evidencia o ambiente acolhedor do espaço físico da clínica."
                             github="https://github.com/1241330/website_patricia_bacelar_psicologia"
                         />
@@ -225,7 +225,7 @@ export default function Home() {
                             period="abr de 2025 - o momento"
                             open={descriptionOpen2}
                             setOpen={setDescriptionOpen2}
-                            language="TypeScript"
+                            languages={["TypeScript"]}
                             description="Integro a equipa responsável pela reestruturação do site do Núcleo de Estudantes de Informática do ISEP. O objetivo deste projeto é melhorar a experiência do utilizador, focando-se na otimização da navegação e da acessibilidade, enquanto se preserva a identidade visual do núcleo."
                             github="https://github.com/1241330"
                         />
@@ -236,7 +236,7 @@ export default function Home() {
                             period="dez de 2024 - jan de 2025"
                             open={descriptionOpen3}
                             setOpen={setDescriptionOpen3}
-                            language="Java"
+                            languages={["Java"]}
                             description="No contexto da unidade curricular Laboratório/Projeto I, desenvolvi, juntamente com uma equipa de três colegas, uma aplicação em Java centrada na reconstrução e identificação de imagens através da técnica de Eigenfaces.
                             O projeto teve como classificação final, a nota máxima, 20 /20."
                             github="https://github.com/1241330/projeto_LAPR1"
@@ -248,7 +248,7 @@ export default function Home() {
                             period="abr de 2025 - o momento"
                             open={descriptionOpen4}
                             setOpen={setDescriptionOpen4}
-                            language="Java & Python"
+                            languages={["Java", "Python"]}
                             description="Projecto em desenvolvimento em equipa no âmbito das unidades curriculares Laboratório/Projecto II (LAPR2), Engenharia de Software (ESOFT), Paradigmas de Programação (PPROG), Matemática Computacional (MATCP) e Matemática Discreta (MDISC), com o objectivo de criar uma solução que simule o funcionamento das redes ferroviárias."
                             github="https://github.com/1241330"
                         />
@@ -317,7 +317,7 @@ export default function Home() {
 }
 
 // Componente Projeto
-function Project({
+function Projeto({
                      title,
                      period,
                      open,
