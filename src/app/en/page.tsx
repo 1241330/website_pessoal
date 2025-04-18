@@ -331,7 +331,7 @@ function Project({
     };
 
     return (
-        <div className="bg-gray-200 text-black rounded-xl p-6 shadow-md flex flex-col justify-between h-full">
+        <div className="bg-blue-100 text-black rounded-xl p-6 shadow-md flex flex-col justify-between h-full">
             {/*  Título + Período */}
             <div>
                 <h3 className="text-2xl font-bold mb-2">{title}</h3>
