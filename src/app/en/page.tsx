@@ -63,10 +63,10 @@ export default function Home() {
                 <section className="w-full max-w-4xl mx-auto px-4" id="about">
                     <h2 className="text-3xl font-semibold mt-0 mb-6 border-b pb-2">About Me</h2>
                     <p className="text-lg leading-relaxed text-justify">
-                        Currently, I am a first-year student of Computer Engineering at the Higher Institute of Engineering of Porto.
+                        Currently, I am a first-year student of Computer Engineering at the 'Instituto Superior de Engenharia do Porto'.
                         From an early age, I developed a particular interest in <span className="text-purple-400 font-semibold">front-end</span> development,
                         a field where I found a perfect combination of creativity and technology. My involvement in the
-                        <span className="font-semibold text-cyan-400"> Núcleo de Estudantes de Informática do ISEP (NEI-ISEP)</span> was a valuable opportunity,
+                        <span className="font-semibold text-cyan-400"> 'Núcleo de Estudantes de Informática do ISEP (NEI-ISEP)'</span> was a valuable opportunity,
                         not only for allowing me to collaborate with peers on real projects but also for providing me with the learning
                         of a new programming language.
                         <br /><br />
@@ -198,13 +198,15 @@ export default function Home() {
                 {/* Projects */}
                 <section className="w-full max-w-4xl mx-auto pb-12 px-4" id="projects">
                     <h2 className="text-3xl font-semibold mb-4 border-b pb-2">Projects</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-7 auto-rows-fr">
+
                         {/* Project 1 */}
                         <Project
                             title="Patrícia Bacelar Psicologia Clínica Website"
                             period="apr 2025 - present"
                             open={descriptionOpen1}
                             setOpen={setDescriptionOpen1}
+                            languages={["TypeScript"]}
                             description="The website for the Patrícia Bacelar Psicologia Clínica is being developed with the goal of providing a clear and intuitive browsing experience, aligned with the clinic's visual identity. It offers users detailed information about the clinical psychology services, introduces Dr. Patrícia Bacelar, displays patient testimonials, and features a gallery that highlights the clinic’s welcoming physical environment."
                             github="https://github.com/1241330/website_patricia_bacelar_psicologia"
                         />
@@ -215,6 +217,7 @@ export default function Home() {
                             period="apr 2025 - present"
                             open={descriptionOpen2}
                             setOpen={setDescriptionOpen2}
+                            languages={["TypeScript"]}
                             description="I am part of the team responsible for restructuring the website of the Núcleo de Estudantes de Engenharia do Porto. This project aims to enhance the user experience by focusing on improving navigation and accessibility while preserving the association’s visual identity."
                             github="https://github.com/1241330"
                         />
@@ -225,6 +228,7 @@ export default function Home() {
                             period="dec 2024 - jan 2025"
                             open={descriptionOpen3}
                             setOpen={setDescriptionOpen3}
+                            languages={["Java"]}
                             description="As part of the Laboratory/Project I course, I, along with three colleagues, developed a Java application focused on the reconstruction and identification of images using the Eigenfaces technique. The project received the highest possible grade, 20 /20."
                             github="https://github.com/1241330/projeto_LAPR1"
                         />
@@ -235,6 +239,7 @@ export default function Home() {
                             period="apr 2025 - present"
                             open={descriptionOpen4}
                             setOpen={setDescriptionOpen4}
+                            languages={["Java", "Python"]}
                             description="Project under development by a team within the curricular units Laboratory/Project II (LAPR2), Software Engineering (ESOFT), Programming Paradigms (PPROG), Computational Mathematics (MATCP) and Discrete Mathematics (MDISC), with the aim of creating a solution that simulates the functioning of railway networks."
                             github="https://github.com/1241330"
                         />
@@ -302,30 +307,76 @@ export default function Home() {
     );
 }
 
-// Project Component
-function Project({title, period, open, setOpen, description, github}: any) {
+function Project({
+                     title,
+                     period,
+                     open,
+                     setOpen,
+                     description,
+                     github,
+                     languages = [],
+                 }: {
+    title: string;
+    period: string;
+    open: boolean;
+    setOpen: (open: boolean) => void;
+    description: string;
+    github: string;
+    languages: string[];
+}) {
+    const languageColors: { [key: string]: string } = {
+        TypeScript: 'bg-blue-500',
+        Python: 'bg-cyan-700',
+        Java: 'bg-yellow-700',
+    };
+
     return (
-        <div className="bg-gray-200 text-black rounded-xl p-6 shadow-md">
-            <h3 className="text-2xl font-bold mb-2">{title}</h3>
-            <p className="text-m text-blue-600">{period}</p>
-            {open && (
-                <p className="text-gray-700 mt-2 text-sm">{description}</p>
-            )}
-            <button
-                onClick={() => setOpen(!open)}
-                className="mt-4 text-sm text-black font-bold underline"
-            >
-                {open ? 'Show Less' : 'Description'}
-            </button>
-            <div className="flex justify-start mt-4">
-                <a
-                    href={github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 border rounded hover:bg-purple-400 hover:text-black transition text-sm"
+        <div className="bg-gray-200 text-black rounded-xl p-6 shadow-md flex flex-col justify-between h-full">
+            {/*  Título + Período */}
+            <div>
+                <h3 className="text-2xl font-bold mb-2">{title}</h3>
+                <p className="text-sm text-blue-600 mb-2">{period}</p>
+            </div>
+
+            {/*  Linguagens + Descrição */}
+            <div className="flex-grow">
+                <div className="flex flex-wrap items-center gap-4 mb-4">
+                    {languages.map((lang) => (
+                        <div key={lang} className="flex items-center">
+                            <span
+                                className={`h-3 w-3 rounded-full mr-2 ${
+                                    languageColors[lang] || 'bg-gray-400'
+                                }`}
+                            />
+                            <p className="text-sm text-gray-800">{lang}</p>
+                        </div>
+                    ))}
+                </div>
+
+                {open && (
+                    <p className="text-sm text-gray-700">{description}</p>
+                )}
+            </div>
+
+            {/* FUNDO: Botões */}
+            <div className="mt-4">
+                <button
+                    onClick={() => setOpen(!open)}
+                    className="text-sm text-black font-bold underline"
                 >
-                    GitHub
-                </a>
+                    {open ? 'Show Less' : 'Description'}
+                </button>
+
+                <div className="mt-2">
+                    <a
+                        href={github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 border rounded hover:bg-purple-400 hover:text-black transition text-sm"
+                    >
+                        GitHub
+                    </a>
+                </div>
             </div>
         </div>
     );

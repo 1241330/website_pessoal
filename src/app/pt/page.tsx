@@ -214,6 +214,7 @@ export default function Home() {
                             period="abr de 2025 - o momento"
                             open={descriptionOpen1}
                             setOpen={setDescriptionOpen1}
+                            languages={["TypeScript"]}
                             description="O website da clínica Patrícia Bacelar Psicologia Clínica está a ser desenvolvido com o objetivo de oferecer uma experiência de navegação clara e intuitiva, alinhada à identidade visual da clínica. Nele, os utilizadores encontram informações detalhadas sobre os serviços de psicologia clínica oferecidos, apresentação da Doutora Patrícia Bacelar, depoimentos de pacientes, além de uma galeria de imagens que evidencia o ambiente acolhedor do espaço físico da clínica."
                             github="https://github.com/1241330/website_patricia_bacelar_psicologia"
                         />
@@ -224,6 +225,7 @@ export default function Home() {
                             period="abr de 2025 - o momento"
                             open={descriptionOpen2}
                             setOpen={setDescriptionOpen2}
+                            languages={["TypeScript"]}
                             description="Integro a equipa responsável pela reestruturação do site do Núcleo de Estudantes de Informática do ISEP. O objetivo deste projeto é melhorar a experiência do utilizador, focando-se na otimização da navegação e da acessibilidade, enquanto se preserva a identidade visual do núcleo."
                             github="https://github.com/1241330"
                         />
@@ -234,6 +236,7 @@ export default function Home() {
                             period="dez de 2024 - jan de 2025"
                             open={descriptionOpen3}
                             setOpen={setDescriptionOpen3}
+                            languages={["Java"]}
                             description="No contexto da unidade curricular Laboratório/Projeto I, desenvolvi, juntamente com uma equipa de três colegas, uma aplicação em Java centrada na reconstrução e identificação de imagens através da técnica de Eigenfaces.
                             O projeto teve como classificação final, a nota máxima, 20 /20."
                             github="https://github.com/1241330/projeto_LAPR1"
@@ -245,6 +248,7 @@ export default function Home() {
                             period="abr de 2025 - o momento"
                             open={descriptionOpen4}
                             setOpen={setDescriptionOpen4}
+                            languages={["Java", "Python"]}
                             description="Projecto em desenvolvimento em equipa no âmbito das unidades curriculares Laboratório/Projecto II (LAPR2), Engenharia de Software (ESOFT), Paradigmas de Programação (PPROG), Matemática Computacional (MATCP) e Matemática Discreta (MDISC), com o objectivo de criar uma solução que simule o funcionamento das redes ferroviárias."
                             github="https://github.com/1241330"
                         />
@@ -315,29 +319,76 @@ export default function Home() {
 
 
 // Componente Projeto
-function Projeto({title, period, open, setOpen, description, github}: any) {
+function Projeto({
+                     title,
+                     period,
+                     open,
+                     setOpen,
+                     description,
+                     github,
+                     languages = [],
+                 }: {
+    title: string;
+    period: string;
+    open: boolean;
+    setOpen: (open: boolean) => void;
+    description: string;
+    github: string;
+    languages: string[];
+}) {
+    const languageColors: { [key: string]: string } = {
+        TypeScript: 'bg-blue-500',
+        Python: 'bg-cyan-700',
+        Java: 'bg-yellow-700',
+    };
+
     return (
-        <div className="bg-gray-200 text-black rounded-xl p-6 shadow-md">
-            <h3 className="text-2xl font-bold mb-2">{title}</h3>
-            <p className="text-m text-blue-600">{period}</p>
-            {open && (
-                <p className="text-gray-700 mt-2 text-sm">{description}</p>
-            )}
-            <button
-                onClick={() => setOpen(!open)}
-                className="mt-4 text-sm text-black font-bold underline"
-            >
-                {open ? 'Mostrar Menos' : 'Descrição'}
-            </button>
-            <div className="flex justify-start mt-4">
-                <a
-                    href={github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 border rounded hover:bg-purple-400 hover:text-black transition text-sm"
+        <div className="bg-gray-200 text-black rounded-xl p-6 shadow-md flex flex-col justify-between h-full">
+            {/*  Título + Período */}
+            <div>
+                <h3 className="text-2xl font-bold mb-2">{title}</h3>
+                <p className="text-sm text-blue-600 mb-2">{period}</p>
+            </div>
+
+            {/*  Linguagens + Descrição */}
+            <div className="flex-grow">
+                <div className="flex flex-wrap items-center gap-4 mb-4">
+                    {languages.map((lang) => (
+                        <div key={lang} className="flex items-center">
+                            <span
+                                className={`h-3 w-3 rounded-full mr-2 ${
+                                    languageColors[lang] || 'bg-gray-400'
+                                }`}
+                            />
+                            <p className="text-sm text-gray-800">{lang}</p>
+                        </div>
+                    ))}
+                </div>
+
+                {open && (
+                    <p className="text-sm text-gray-700">{description}</p>
+                )}
+            </div>
+
+            {/* FUNDO: Botões */}
+            <div className="mt-4">
+                <button
+                    onClick={() => setOpen(!open)}
+                    className="text-sm text-black font-bold underline"
                 >
-                    GitHub
-                </a>
+                    {open ? 'Show Less' : 'Description'}
+                </button>
+
+                <div className="mt-2">
+                    <a
+                        href={github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 border rounded hover:bg-purple-400 hover:text-black transition text-sm"
+                    >
+                        GitHub
+                    </a>
+                </div>
             </div>
         </div>
     );
