@@ -26,7 +26,7 @@ const navItems = {
 const Navbar = () => {
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [language, setLanguage] = useState<'pt' | 'en'>('pt');
+    const [language, setLanguage] = useState<'en' | 'pt'>('en');
     const langRef = useRef<HTMLDivElement>(null);
     const menuRef = useRef<HTMLDivElement>(null);
     const router = useRouter();
